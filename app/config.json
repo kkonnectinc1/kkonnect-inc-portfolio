@@ -1,11 +1,11 @@
 {
-  "name": "Hamish Williams",
-  "role": "Designer",
-  "disciplines": ["Developer", "Prototyper", "Animator", "Illustrator", "Modder"],
-  "url": "https://hamishw.com",
-  "bluesky": "hamishw.com",
-  "figma": "@Hamish",
-  "github": "HamishMW",
-  "repo": "https://github.com/HamishMW/portfolio",
-  "ascii": "__  __  __\n\u005C \u005C \u005C \u005C \u005C\u2215\n \u005C \u005C\u2215\u005C \u005C\n  \u005C\u2215  \u005C\u2215\n"
+  "name": "Kkonnect Inc",
+  "role": "Technology Solutions Provider",
+  "disciplines": ["Wi-Fi Services", "Mobile Apps", "Smart Systems", "IoT Integrations", "Tech Education"],
+  "url": "https://kkonnect.com",
+  "bluesky": "",
+  "figma": "@KkonnectInc",
+  "github": "KkonnectInc",
+  "repo": "https://github.com/KkonnectInc/portfolio",
+  "ascii": " _  __ _  __             _           _      \n| |/ /| |/ /            (_)         | |     \n| ' / | ' / ___  _ __    _  ___  ___| |__   \n|  <  |  < / _ \\| '_ \\  | |/ _ \\/ __| '_ \\  \n| . \\ | . \\ (_) | | | | | |  __/\\__ \\ | | | \n|_|\\_\\|_|\\_\\___/|_| |_| |_|\\___||___/_| |_|"
 }
