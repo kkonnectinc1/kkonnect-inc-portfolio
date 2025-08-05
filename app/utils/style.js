@@ -10,71 +10,66 @@ export const media = {
 };
 
 /**
- * Convert a px string to a number
+ * Convert a px string (e.g., "16px") to a number
  */
-export const pxToNum = px => Number(px.replace('px', ''));
+export const pxToNum = (px) => Number(px.replace('px', ''));
 
 /**
- * Convert a number to a px string
+ * Convert a number to a px string (e.g., 16 → "16px")
  */
-export const numToPx = num => `${num}px`;
+export const numToPx = (num) => `${num}px`;
 
 /**
- * Convert pixel values to rem for a11y
+ * Convert pixels to rem (e.g., 16 → "1rem")
+ * Improves accessibility scaling
  */
-export const pxToRem = px => `${px / 16}rem`;
+export const pxToRem = (px) => `${px / 16}rem`;
 
 /**
- * Convert ms token values to a raw numbers for ReactTransitionGroup
- * Transition delay props
+ * Convert an ms string (e.g., "300ms") to a number
  */
-export const msToNum = msString => Number(msString.replace('ms', ''));
+export const msToNum = (ms) => Number(ms.replace('ms', ''));
 
 /**
- * Convert a number to an ms string
+ * Convert a number to an ms string (e.g., 300 → "300ms")
  */
-export const numToMs = num => `${num}ms`;
+export const numToMs = (num) => `${num}ms`;
 
 /**
- * Convert an rgb theme property (e.g. rgbBlack: '0 0 0')
- * to values that can be spread into a ThreeJS Color class
+ * Convert rgb string (e.g., "0 0 0") to normalized RGB array for Three.js
  */
-export const rgbToThreeColor = rgb =>
-  rgb?.split(' ').map(value => Number(value) / 255) || [];
+export const rgbToThreeColor = (rgb) =>
+  rgb?.split(' ').map((value) => Number(value) / 255) || [];
 
 /**
- * Convert a JS object into `--` prefixed css custom properties.
- * Optionally pass a second param for normal styles
+ * Generate CSS custom properties from JS object.
+ * Automatically formats numeric values based on property name.
  */
 export function cssProps(props, style = {}) {
-  let result = {};
+  const result = {};
 
-  const keys = Object.keys(props);
+  for (const [key, value] of Object.entries(props)) {
+    let val = value;
 
-  for (const key of keys) {
-    let value = props[key];
-
-    if (typeof value === 'number' && key === 'delay') {
-      value = numToMs(value);
+    if (typeof val === 'number') {
+      if (key === 'delay') {
+        val = numToMs(val);
+      } else if (key === 'opacity') {
+        val = `${val * 100}%`;
+      } else {
+        val = numToPx(val);
+      }
     }
 
-    if (typeof value === 'number' && key !== 'opacity') {
-      value = numToPx(value);
-    }
-
-    if (typeof value === 'number' && key === 'opacity') {
-      value = `${value * 100}%`;
-    }
-
-    result[`--${key}`] = value;
+    result[`--${key}`] = val;
   }
 
   return { ...result, ...style };
 }
 
 /**
- * Concatenate classNames together
+ * Concatenate class names into a single string, ignoring falsy values
  */
-export function classes(...classes) {
-  return classes.filter(Boolean).join(' ');
+export function classes(...args) {
+  return args.filter(Boolean).join(' ');
 }

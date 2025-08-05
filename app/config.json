@@ -1,11 +1,17 @@
 {
   "name": "Kkonnect Inc",
-  "role": "Technology Solutions Provider",
-  "disciplines": ["Wi-Fi Services", "Mobile Apps", "Smart Systems", "IoT Integrations", "Tech Education"],
+  "role": "Innovative Technology Solutions Provider",
+  "disciplines": [
+    "Pay-Per-Use Wi-Fi Services",
+    "Smartphone & IoT App Development",
+    "Secure Digital Parenting Platforms",
+    "USSD & Mobile API Integrations"
+  ],
   "url": "https://kkonnect.com",
-  "bluesky": "",
   "figma": "@KkonnectInc",
-  "github": "KkonnectInc",
-  "repo": "https://github.com/KkonnectInc/portfolio",
-  "ascii": " _  __ _  __             _           _      \n| |/ /| |/ /            (_)         | |     \n| ' / | ' / ___  _ __    _  ___  ___| |__   \n|  <  |  < / _ \\| '_ \\  | |/ _ \\/ __| '_ \\  \n| . \\ | . \\ (_) | | | | | |  __/\\__ \\ | | | \n|_|\\_\\|_|\\_\\___/|_| |_| |_|\\___||___/_| |_|"
+  "github": "kkonnectinc1",
+  "repo": "https://github.com/kkonnectinc1/portfolio",
+  "bluesky": "",
+  "ascii": " _  __ _  __             _           _      \n| |/ /| |/ /            (_)         | |     \n| ' / | ' / ___  _ __    _  ___  ___| |__   \n|  <  |  < / _ \\| '_ \\  | |/ _ \\/ __| '_ \\  \n| . \\ | . \\ (_) | | | | | |  __/\\__ \\ | | | \n|_|\\_\\|_|\\_\\___/|_| |_| |_|\\___||___/_| |_|",
+  "description": "Kkonnect Inc is redefining connectivity by delivering intelligent tech solutions for communities, homes, and enterprises. From scalable Wi-Fi platforms to secure parenting tools and USSD integrations — we connect innovation with impact."
 }

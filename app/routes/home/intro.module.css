@@ -1,16 +1,21 @@
 .intro {
-  height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  min-height: 0svh;
+  padding: var(--spaceM) var(--spaceS);
+  text-align: left;
+
+  @media (--mediaMobile) {
+    padding: var(--spaceS) var(--spaceXS);
+  }
 }
 
 .text {
   max-width: 1024px;
-  width: 100%;
+  width: 50%;
   position: relative;
-  top: calc(var(--spaceL) * -1);
 
   @media (--mediaDesktop) {
     max-width: 920px;
@@ -19,18 +24,6 @@
   @media (--mediaLaptop) {
     max-width: 780px;
   }
-
-  @media (--mediaMobile) {
-    top: calc(var(--space3XL) * -1);
-  }
-
-  @media (--mediaMobileS) {
-    top: calc(var(--spaceXL) * -1);
-  }
-
-  @media (max-width: 820px) and (max-height: 420px) {
-    top: calc(var(--spaceM) * -1);
-  }
 }
 
 .name {
@@ -38,7 +31,7 @@
   font-size: calc((24 / 16) * 1rem);
   letter-spacing: 0.3em;
   color: var(--textLight);
-  margin-bottom: var(--space2XL);
+  margin-bottom: var(--spaceS);
   margin-top: 0;
   font-weight: var(--fontWeightMedium);
   line-height: 1;
@@ -46,8 +39,8 @@
   transition: opacity var(--durationL) var(--bezierFastoutSlowin) 0.2s;
 
   @media (--mediaLaptop) {
-    font-size: calc((22 / 16) * 1rem);
-    margin-bottom: var(--spaceXL);
+    font-size: calc((20 / 16) * 1rem);
+    margin-bottom: var(--spaceXS);
   }
 
   @media (--mediaTablet) {
@@ -55,15 +48,14 @@
   }
 
   @media (--mediaMobile) {
-    margin-bottom: var(--spaceL);
+    margin-bottom: var(--spaceXS);
     letter-spacing: 0.2em;
     white-space: nowrap;
     overflow: hidden;
   }
 
   @media (max-width: 820px) and (max-height: 420px) {
-    margin-bottom: var(--spaceL);
-    margin-bottom: var(--spaceXL);
+    margin-bottom: var(--spaceXS);
   }
 
   &[data-visible='true'] {
@@ -73,6 +65,7 @@
 
 .title {
   letter-spacing: -0.03em;
+  margin: 5px 0;
 }
 
 .row {
@@ -80,6 +73,7 @@
   flex-direction: row;
   align-items: center;
   position: relative;
+  margin: 2px 0;
 
   &[data-hidden='true'] {
     opacity: 0;
@@ -117,6 +111,7 @@
   color: color-mix(in lab, var(--text) 0%, transparent);
   transition: opacity 0.5s ease var(--durationM);
   isolation: isolate;
+  margin: 1px 0;
 
   &::after {
     content: '';
@@ -182,7 +177,7 @@
 
 .line {
   content: '';
-  height: 2px;
+  height: 1px;
   background: color-mix(in lab, var(--text) 30%, transparent);
   width: 120%;
   display: flex;
@@ -235,7 +230,7 @@
   width: 26px;
   height: 38px;
   position: fixed;
-  bottom: 64px;
+  bottom: 20px;
   transition-property: opacity;
   transition-duration: var(--durationL);
   transition-timing-function: ease;
@@ -305,12 +300,12 @@
   transition-property: opacity;
   transition-timing-function: cubic-bezier(0.8, 0.1, 0.27, 1);
   transition-duration: var(--durationM);
-  padding: 20px;
+  padding: 5px;
 
   @media (--mediaUseMotion) {
     animation-name: introMobileScrollIndicator;
     transition-property: opacity, transform;
-    transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 10px, 0);
   }
 
   &[data-status='entered'] {

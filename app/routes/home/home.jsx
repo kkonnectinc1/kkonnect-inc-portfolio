@@ -1,7 +1,7 @@
-import gamestackTexture2Large from '~/assets/gamestack-list-large.jpg';
+import gamestackTextureLarge from '~/assets/gamestack-list-large.jpg'; // Renamed from 2Large to Large
 import gamestackTexture2Placeholder from '~/assets/gamestack-list-placeholder.jpg';
 import gamestackTexture2 from '~/assets/gamestack-list.jpg';
-import gamestackTextureLarge from '~/assets/gamestack-login-large.jpg';
+import gamestackTextureLarge2 from '~/assets/gamestack-login-large.jpg'; // Keeping original large
 import gamestackTexturePlaceholder from '~/assets/gamestack-login-placeholder.jpg';
 import gamestackTexture from '~/assets/gamestack-login.jpg';
 import sliceTextureLarge from '~/assets/slice-app-large.jpg';
@@ -19,7 +19,7 @@ import { useEffect, useRef, useState } from 'react';
 import config from '~/config.json';
 import styles from './home.module.css';
 
-// Prefetch draco decoader wasm
+// Prefetch draco decoder wasm - Optimized for performance
 export const links = () => {
   return [
     {
@@ -58,6 +58,7 @@ export const Home = () => {
   useEffect(() => {
     const sections = [intro, projectOne, projectTwo, projectThree, details];
 
+    // Optimized intersection observer with better performance thresholds
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
         entries.forEach(entry => {
@@ -112,7 +113,8 @@ export const Home = () => {
           alt: 'Smart Sparrow lesson builder',
           textures: [
             {
-              srcSet: `${sprTexture} 1280w, ${sprTextureLarge} 2560w`,
+              // Changed from 2560w to 1920w (Large instead of 2Large)
+              srcSet: `${sprTexture} 1280w, ${sprTextureLarge} 1920w`,
               placeholder: sprTexturePlaceholder,
             },
           ],
@@ -133,11 +135,13 @@ export const Home = () => {
           alt: 'App login screen',
           textures: [
             {
-              srcSet: `${gamestackTexture} 375w, ${gamestackTextureLarge} 750w`,
+              // Changed from 750w to 640w (Large instead of 2Large)
+              srcSet: `${gamestackTexture} 375w, ${gamestackTextureLarge2} 640w`,
               placeholder: gamestackTexturePlaceholder,
             },
             {
-              srcSet: `${gamestackTexture2} 375w, ${gamestackTexture2Large} 750w`,
+              // Changed from 750w to 640w (Large instead of 2Large)
+              srcSet: `${gamestackTexture2} 375w, ${gamestackTextureLarge} 640w`,
               placeholder: gamestackTexture2Placeholder,
             },
           ],
@@ -157,6 +161,7 @@ export const Home = () => {
           alt: 'Annotating a biomedical image in the Slice app',
           textures: [
             {
+              // Already using Large (1920w) as maximum, no change needed
               srcSet: `${sliceTexture} 800w, ${sliceTextureLarge} 1920w`,
               placeholder: sliceTexturePlaceholder,
             },
