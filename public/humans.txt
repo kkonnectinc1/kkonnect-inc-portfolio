@@ -1,39 +1,65 @@
-__  __  __
-\ \ \ \ \/
- \ \/\ \
-  \/  \/
+__   __
+\ \ / /
+ \ V / 
+  > <  
+ / . \ 
+/_/ \_\
 
 The humans.txt file explains the team, technology,
-and graphic assets behind this site humanstxt.org.
+and graphic assets behind this site — humanstxt.org.
 
 _______________________________________________________________________________
 
-DESIGNER | デザイナー
+TEAM | チーム
 
-Hamish Williams
-Hand crafted design & web development
+Kkonnect Inc （コネクト株式会社）  
+Web & Mobile App Developers • ISP • Builders of Digital Futures
+
+Founded in Nairobi, Kenya 🇰🇪  
+We specialize in full-stack applications, modern UI, and smart connectivity.
+
+Connect with us:
+kkonnect.co.ke  
+github.com/KkonnectInc  
+twitter.com/KkonnectInc
+
+_______________________________________________________________________________
+
+DESIGN & BRANDING | デザイン
+
+Crafted in-house by the Kkonnect Creative Studio  
+Focused on intuitive UX and bold digital storytelling
 
 Design tools:
-Figma
-Photoshop
+Figma  
+Photoshop  
 Blender
-
-twitter.com/hamishmw
-github.com/hamishmw
 
 _______________________________________________________________________________
 
 TECHNOLOGY | テクノロジー
 
-React
-Remix
-Three.js
-Framer Motion
+React  
+Remix  
+Three.js  
+Tailwind CSS  
+Framer Motion  
+Cloudflare Pages
 
 _______________________________________________________________________________
 
 FONTS | フォント
 
-Gotham
-IPA Gothic Regular
+Geist  
+Inter  
 Hiragino Kaku Gothic W8
+
+_______________________________________________________________________________
+
+IDENTITY
+
+The “K” is for Kkonnect — always styled in **true red** (#FF0000).  
+It represents bold beginnings, direct digital connections,  
+and the power to design, build, and deliver.
+
+_______________________________________________________________________________

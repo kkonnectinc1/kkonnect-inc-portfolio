@@ -1,4 +1,4 @@
-const config = require('../app/config.json');
+const branding = require('../app/branding.json');
 
 // Pop a lil' monogram in the terminal
-console.info(config.ascii);
+console.info(branding.ascii);

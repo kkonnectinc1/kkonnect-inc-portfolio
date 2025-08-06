@@ -1,4 +1,4 @@
-import config from '~/config.json';
+import branding from '~/branding.json';
 
 export const navLinks = [
   {
@@ -22,17 +22,17 @@ export const navLinks = [
 export const socialLinks = [
   {
     label: 'Bluesky',
-    url: `https://bsky.app/profile/${config.bluesky}`,
+    url: `https://bsky.app/profile/${branding.bluesky}`,
     icon: 'bluesky',
   },
   {
     label: 'Figma',
-    url: `https://www.figma.com/${config.figma}`,
+    url: `https://www.figma.com/${branding.figma}`,
     icon: 'figma',
   },
   {
     label: 'Github',
-    url: `https://github.com/${config.github}`,
+    url: `https://github.com/${branding.github}`,
     icon: 'github',
   },
 ];
